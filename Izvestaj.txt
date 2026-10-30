@@ -1,0 +1,104 @@
+Izvestaj o sezoni 2024/25
+
+1. Pregled sezone
+ 
+--Broj utakmica : 380
+--Broj golova : 1092
+--Prosecan broj golova po utakmici : 2.87
+--Udeo pobeda domacina : 41.32
+--Udeo pobeda gostiju : 33.68
+--Udeo izjednacenih utakmica : 25
+
+2. Preled statistike po mesecima :
+
+-- month	year	num_matches	total_goals	avg_goals
+-- 8	    2024	28	            99	        3.54
+-- 9	    2024	32	            78	        2.44
+-- 10	    2024	30	            102	        3.4
+-- 11	    2024	37	            96	        2.59
+-- 12	    2024	52	            145	        2.79
+-- 1	    2025	51	            137	        2.69 
+-- 2	    2025	40	            119	        2.98
+-- 3	    2025	40	            113	        2.83
+-- 4	    2025	40	            124	        3.1
+-- 5	    2025	30	            79	        2.63
+
+Decembar i januar se izdvajaju kao meseci sa najvise utakmica, najvise postignutih golova i najvecim prosecnim brojem golova po utakmici.
+
+3. Publika
+
+Na pregledu nize mozemo videti prosecnu posetu i popunjenost po stadionima. U ovoj sezoni po prosecnoj poseti prednjaci Harbourside Park (44.074.05), a kada je rec o kapacitetu to je Elmsworth Lane sa 90.61%.
+Za cak 9 utakmica posecenost je nepoznata, i nije bilo utakmica bez publike.
+
+	stadium_name			avg_att		capacity
+--	Pemberton Park			29905.26	83.07
+--	The Albion Ground		22467.05	84.78
+--	Valemont Park			23804.11	88.16
+--	Dunmore Park			10961.72	85.64
+--	Kingsbridge Stadium		37968.42	80.78
+--	National Stadium		28404.67	35.51
+--	Stonebridge Park		19137.89	86.99
+--	Riverside Ground		26232.89	84.62
+--	Brackley Road			12207.17	84.19
+--	Northport Arena			36250.17	88.42
+--	Queensport Docks Stadium	19739.21	85.82
+--	Thornbury Bowl			32299.71	83.9
+--	Lakeside Stadium		25482		83.55
+--	Harbourside Park		44074.05	84.76
+--	Westmere Park			16282.68	88.01
+--	Cliff Road			18128.67	86.33
+--	Elmsworth Lane			21745.5		90.61
+--	Forest Ground			13922.89	87.02
+--	Castle Grounds			29616.78	89.75
+--	Mill Lane			24960		87.58
+--	Oakfield Road			17125.19	87.82
+
+4. Sudije
+
+Ukupno je sudilo 19 sudija, svaki po 20 utakmica. Nize mozete videti pregled sudija, kao i prosecan broj kartona po utakmici. Peter Lindgren je podelio najvise kartona po utakmici, cak 4.25.
+
+	referee_id	referee_name	num_matches	num_cards
+--	12		Mark Halsey-Brown	20	3.75
+--	6		Craig Pawson-Lee	20	4
+--	16		Owen Pritchard		20	3.4
+--	13		Stuart Attwell-Jones	20	3.55
+--	9		Gavin Reid		20	3.4
+--	2		Daniel Price		20	3.65
+--	4		Peter Lindgren		20	4.25
+--	8		Tomás Herrera		20	3.25
+--	7		Simon Albright		20	3.6
+--	11		Robert Kane		20	3.45
+--	10		Jonas Berg		20	2.8
+--	18		Henrik Dahl		20	3.75
+--	1		Michael Oliver Hart	20	2.8
+--	14		Ivan Kovač		20	3.75
+--	3		Graham Sutton		20	2.85
+--	17		Samuel Achebe		20	2.75
+--	5		Amir Haddad		20	4.1
+--	19		Neil Swarbrick		20	3.15
+--	15		Luca Benedetti		20	3.75
+
+5.Igraci : 5 najboljih strelaca i 5 najboljih asistenata
+
+Kada je rec o strelcima, najbolji u ovoj sezoni su bili :
+
+-- Mattéo O'Brien - 34 gola, od toga 4 iz penala	
+-- Leo	Marsh, igrac Northport United-a - 32 gola, 4 iz penala
+-- José	Muñoz - 24 gola, 3 iz penala
+-- Marko Stanković - 17 golova, 4 iz penala
+-- Leo	Marsh, igrac Riverton Athletic-a - 16 golova, 1 iz penala	 
+-- Ben	Bennett	- 15 golova, 1 iz penala
+
+A kada je rec o asistencijama, u ovoj sezoni su se iskazali sledeci igraci :
+
+-- Pablo Fernández - 9 asistencija
+-- Filip Petrović - 7 asistencija
+-- Lucas Pereira - 7 asistencija
+-- Eirik Solberg - 7 asistencija
+-- Mikkel Nielsen - 6 asistencija
+
+6.Kvalitet podataka
+
+Nepostojeci igrac sa player_id-em 99999 je dobio dva puta zuti karton; taj id ne postoji u tabeli players.
+
+Mismatch izmedju tabele matches i match_events - utakmica sa id-em 2227 u matches ima ukupno 4 gola (3 za domacina, 1 za goste), dok u tabeli match_events imamo podatke o samo 3 gola.
