@@ -16,9 +16,9 @@ Each row in fact_card table is linked to one card event (event_id) for a specifi
 
 Relationships :
 
- -event_id - unique for each card event, key of fact table
- -match_id - match identificator
- -date_key - dim_date.date_key (foreign kljuc)
- -team_id - dim_team.team_id (foreign kljuc)
- -player_id - dim_player.player_id (foreign kljuc)
- -referee_id - dim_referee.referee_id (foreign kljuc)
+ -event_id - unique for each card event, key of fact table  
+ -match_id - match identificator  
+ -date_key - dim_date.date_key (foreign key)  
+ -team_id - dim_team.team_id (foreign key)  
+ -player_id - dim_player.player_id (foreign key)  
+ -referee_id - dim_referee.referee_id (foreign key)  
