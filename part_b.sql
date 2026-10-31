@@ -42,7 +42,7 @@ group by month, year
 -- 3	    2025	40	            113	        2.83
 -- 4	    2025	40	            124	        3.1
 -- 5	    2025	30	            79	        2.63
---januar i decembar se izdvajaju kao meseci sa najvise utakmica, najvise postignutih golova i najvecim prosekom
+--decembar se izdvaja kao mesec sa najvise utakmica, najvise postignutih golova, dok je avgust mesec sa najvecim prosekom
 
 --3.Публика: просечна посета и попуњеност по стадиону; утакмице без податка о посети и
 --утакмица без публике.

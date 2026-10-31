@@ -23,7 +23,7 @@ Izvestaj o sezoni 2024/25
 -- 4	    2025	40	            124	        3.1
 -- 5	    2025	30	            79	        2.63
 
-Decembar i januar se izdvajaju kao meseci sa najvise utakmica, najvise postignutih golova i najvecim prosecnim brojem golova po utakmici.
+Decembar se izdvaja kao mesec sa najvise utakmica, najvise postignutih golova, dok je avgust mesec sa najvecim prosecnim brojem golova po utakmici.
 
 3. Publika
 

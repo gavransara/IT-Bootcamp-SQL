@@ -53,8 +53,31 @@ with cte as(
     from matches m join match_events me on m.match_id = me.match_id
     where season = '2024/25' and event_type in ('goal', 'penalty_goal')
 )
-select team_id, player_id, kickoff_ts
-from cte
+select c.team_id, c.player_id, team_name, first_name, last_name, kickoff_ts
+from cte c join players p on c.player_id = p.player_id join teams t on t.team_id = c.team_id
 where next is null
---delimicno uradjeno, nasli smo koji igrac u kom klubu je dao i kada poslednji gol u sezoni
+order by kickoff_ts
+--klub koji je dao poslednji gol najranije je Elmsworth Wanderers
+
+--4.За домаће утакмице клуба Northport United у сезони 2024/25 прикажите посету и промену у односу на претходну домаћу утакмицу. Где је највећи пад?
+select m.match_id, kickoff_ts, attendance, 
+    attendance - lag(attendance) over(order by kickoff_ts) as diff
+from matches m join teams t on m.home_team_id = t.team_id
+where season = '2024/25' and team_name = 'Northport United' 
+--najveci pad je kada uporedimo utakmice 2091 i 2110
+
+--5.Пратите бодове клуба Northport City утакмицу по утакмицу у сезони 2024/25. У којој утакмици по реду и ког датума је прешао 50 бодова?
+with cte as (
+    select match_id, kickoff_ts, 
+        sum(points) over (order by kickoff_ts) as poeni,
+        row_number() over (order by kickoff_ts) as rn
+    from team_matches tm join teams t on tm.team_id = t.team_id
+    where season = '2024/25' and team_name = 'Northport City' 
+)
+select match_id, kickoff_ts, rn
+from cte
+where poeni > 50
+order by rn
+limit 1
+--match_id = 2210, utakmica je 21. po redu
 

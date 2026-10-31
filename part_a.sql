@@ -58,13 +58,13 @@ order by num_matches desc
 --Peter Lindgren, sudio 9 utakmica
 
 --9.Који судија је у сезони 2024/25 имао највећи удео утакмица у којима је досуђен бар један пенал, дат или промашен?
-select m.referee_id, referee_name, round(count(me.event_id) * 100 / count(m.match_id), 2) as pct_penalty
+select m.referee_id, referee_name, round(count(distinct case when me.event_id is not null then m.match_id end) * 100 / count(distinct m.match_id), 2)  as pct_penalty
 from matches m left join match_events me on m.match_id = me.match_id and event_type in ('penalty_miss', 'penalty_goal') left join referees r on r.referee_id = m.referee_id
 where season = '2024/25'
 group by m.referee_id, referee_name
 order by pct_penalty desc
 --udeo utakmica u kojima je dosudjen penal - od svih utakmica, koliko njih ima dosudjen penal
---Peter Lindgren, 56%
+--Peter Lindgren, 45%
 
 --10.Који тренер је освојио највише бодова у утакмицама у којима је његов тим губио на
 --полувремену? Рачунајте и домаће и гостујуће утакмице.
